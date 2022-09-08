@@ -1,0 +1,117 @@
+<div
+  class="cart-item"
+  *ngIf="productsCart && productsCart.length > 0; else noContent"
+>
+  <div class="cart-item-details">
+    <ng-container *ngFor="let product of productsCart">
+      <div class="cart-container">
+        <img [src]="product.url" [alt]="product.name" class="product-image" />
+        <div class="cart-panel">
+          <h4 class="product-name">{{ product.name }}</h4>
+          <div class="product-price">$ {{ product.price }}</div>
+          <div>
+            Amount:
+            <input
+              type="number"
+              name="amount"
+              id="amount"
+              class="number-input"
+              [(ngModel)]="product.amount"
+              (ngModelChange)="changeAmount(product)"
+              min="0"
+            />
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <h3>Total: ${{ total }}</h3>
+  </div>
+
+  <form class="form-margin">
+    <label for="fname">Full name:</label><br />
+    <input
+      type="text"
+      id="fname"
+      name="fname"
+      [(ngModel)]="userInformation.name"
+      #name="ngModel"
+      minlength="3"
+      required
+      placeholder="Minimum 3 characters"
+    /><br />
+    <div
+      *ngIf="name.invalid && (name.dirty || name.touched)"
+      class="alert-danger"
+    >
+      <div *ngIf="name.errors?.['required']">Name is required.</div>
+      <div *ngIf="name.errors?.['minlength']">
+        Name must be at least 3 characters long.
+      </div>
+    </div>
+    <label for="address">Address:</label><br />
+    <input
+      type="text"
+      id="address"
+      name="address"
+      [(ngModel)]="userInformation.address"
+      #address="ngModel"
+      minlength="6"
+      required
+      placeholder="Minimum 6 characters"
+    /><br />
+    <div
+      *ngIf="address.invalid && (address.dirty || address.touched)"
+      class="alert-danger"
+    >
+      <div *ngIf="address.errors?.['required']">Address is required.</div>
+      <div *ngIf="address.errors?.['minlength']">
+        Address must be at least 6 characters long.
+      </div>
+    </div>
+    <label for="creditNumber">Credit and number:</label><br />
+    <input
+      type="text"
+      id="creditNumber"
+      name="creditNumber"
+      [(ngModel)]="userInformation.creditNumber"
+      #creditNumber="ngModel"
+      minlength="16"
+      maxlength="16"
+      pattern="^[0-9]*$"
+      required
+      placeholder="16-digit number"
+    /><br />
+    <div
+      *ngIf="
+        creditNumber.invalid && (creditNumber.dirty || creditNumber.touched)
+      "
+      class="alert-danger"
+    >
+      <div *ngIf="creditNumber.errors?.['required']">
+        Credit and number is required.
+      </div>
+      <div
+        *ngIf="creditNumber.errors?.['minlength'] || creditNumber.errors?.['maxlength']"
+      >
+        Credit and number must be 16 characters long.
+      </div>
+      <div *ngIf="creditNumber.errors?.['pattern']">
+        Credit and number must only be numbers.
+      </div>
+    </div>
+    <div class="note">
+      We will never share your payment details with enyone else.
+    </div>
+
+    <button
+      type="submit"
+      class="product-button"
+      (click)="submit(name, address, creditNumber)"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+<ng-template #noContent>
+  <div class="empty-cart-message">No items in cart</div>
+</ng-template>

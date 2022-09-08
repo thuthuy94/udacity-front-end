@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Book",
+    "price": 9.99,
+    "url": "https://www.oberlo.com/media/1612639204-image3.jpg?fit=max&fm=jpg&w=1824",
+    "description": "You can read it!"
+  },
+  {
+    "id": 2,
+    "name": "Headphones",
+    "price": 249.99,
+    "url": "https://cdn.tgdd.vn/Files/2021/12/29/1407939/kinh-nghiem-chon-mua-headphone-phu-hop-nhat-cho-ba-12.jpg",
+    "description": "Listen to stuff!"
+  },
+  {
+    "id": 3,
+    "name": "Backpack",
+    "price": 79.99,
+    "url": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/September2021/backpack-la-gi-8_81.jpg",
+    "description": "Carry things around town!"
+  },
+  {
+    "id": 4,
+    "name": "Glasses",
+    "price": 129.99,
+    "url": "https://post.healthline.com/wp-content/uploads/2021/03/928254-The-8-Best-Places-to-Buy-Eyeglasses-Online-1200x628-Facebook-1200x628.jpg",
+    "description": "Now you can see!"
+  },
+  {
+    "id": 5,
+    "name": "Cup",
+    "price": 4.99,
+    "url": "https://m.media-amazon.com/images/I/518Qs8clq5L._SL1100_.jpg",
+    "description": "Drink anything with it!"
+  },
+  {
+    "id": 6,
+    "name": "Shirt",
+    "price": 29.99,
+    "url": "https://media.sivasdescalzo.com/media/catalog/product/M/T/MT21930_sivasdescalzo-New_Balance-T-Shirt-1649662794-4.jpg?quality=70&auto=webp&fit=bounds&width=420",
+    "description": "Wear it with style!"
+  }
+]

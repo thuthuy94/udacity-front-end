@@ -1,0 +1,44 @@
+img {
+  border-radius: 10px;
+  width: 320px;
+}
+
+.select-input {
+  width: 108px;
+  margin-bottom: 8px;
+}
+
+.detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
+}
+
+.detail-item {
+  margin-left: 128px;
+  display: flex;
+  flex-direction: column;
+}
+
+.back-link {
+  margin-top: 8px;
+}
+
+.product-name {
+  margin: 1rem 0;
+}
+
+.product-price {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.product-button {
+  width: 108px;
+  background: #33b6e5;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
